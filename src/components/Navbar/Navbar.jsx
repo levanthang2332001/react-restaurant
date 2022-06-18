@@ -1,16 +1,16 @@
-import React from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdOutlineRestaurantMenu } from "react-icons/md";
-import { Link } from "react-router-dom";
-import images from "../../constants/images";
-import "./Navbar.css";
-import Cookies from "js-cookie";
+import React from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi;
+import { MdOutlineRestaurantMenu } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import images from '../../constants/images';
+import './Navbar.css';
+import Cookies from 'js-cookie';
 // import BookTable from '../..//container/BookTable/BookTable';
-import GoogleLoginButton from "../../container/Google/GoogleLoginButton";
+import GoogleLoginButton from '../../container/Google/GoogleLoginButton';
 
 const Navbar = ({ avatar }) => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
-  const urlAvt = Cookies.get("avt");
+  const urlAvt = Cookies.get('avt');
 
   return (
     <nav className="app__navbar">
