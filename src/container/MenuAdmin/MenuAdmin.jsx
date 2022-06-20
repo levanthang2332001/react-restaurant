@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'flowbite-react';
 import axios from 'axios';
+import { ToastContainer, toast, Zoom } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const MenuAdmin = () => {
@@ -32,12 +34,14 @@ const MenuAdmin = () => {
     const handleEdit = (e) => {
         const { id } = e.target;
         sendDataUpdate(id);
+        toast.success('Edit Success');
     };
 
     const handleDelete = (e) => {
         const { id } = e.target;
         e.preventDefault();
         sendDataDelete(id);
+        toast.success('Delete Success');
         setTimeout(() => {
             window.location.reload();
         },1000);
@@ -54,6 +58,7 @@ const MenuAdmin = () => {
 
   return (
     <div>
+        <ToastContainer draggable={false} transition={Zoom} autoClose={3000} />
         <div className='pt-12 px-12'>
             <Table >
                 <Table.Head>
