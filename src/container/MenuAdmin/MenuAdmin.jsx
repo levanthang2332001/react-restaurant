@@ -35,7 +35,7 @@ const MenuAdmin = () => {
         const { id } = e.target;
         e.preventDefault();
         sendDataUpdate(id);
-         toast.success('Edit Success');
+         toast.success('Set Success');
         setTimeout(() => {
             window.location.reload();
         },1000);
