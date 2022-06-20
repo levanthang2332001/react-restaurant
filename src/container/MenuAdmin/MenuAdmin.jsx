@@ -33,6 +33,7 @@ const MenuAdmin = () => {
 
     const handleEdit = (e) => {
         const { id } = e.target;
+        e.preventDefault();
         sendDataUpdate(id);
          toast.success('Edit Success');
         setTimeout(() => {
