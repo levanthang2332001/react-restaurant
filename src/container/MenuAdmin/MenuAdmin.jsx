@@ -34,7 +34,10 @@ const MenuAdmin = () => {
     const handleEdit = (e) => {
         const { id } = e.target;
         sendDataUpdate(id);
-        toast.success('Edit Success');
+         toast.success('Edit Success');
+        setTimeout(() => {
+            window.location.reload();
+        },1000);
     };
 
     const handleDelete = (e) => {
@@ -58,7 +61,7 @@ const MenuAdmin = () => {
 
   return (
     <div>
-        <ToastContainer draggable={false} transition={Zoom} autoClose={3000} />
+        <ToastContainer draggable={false} transition={Zoom} autoClose={1000} />
         <div className='pt-12 px-12'>
             <Table >
                 <Table.Head>
