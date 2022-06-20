@@ -50,6 +50,9 @@ const AddMenu = ({ setOpenModal }) => {
         .then(res => console.log(res))
         .catch(err => console.log(err));
       setOpenModal(false);
+      setTimeout(() => {
+          window.location.reload();
+        },1000);
     } catch (error) {
       console.log(error);
     }
