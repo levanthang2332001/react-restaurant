@@ -36,6 +36,7 @@ const MenuAdmin = () => {
 
     const handleDelete = (e) => {
         const { id } = e.target;
+        e.preventDefault();
         sendDataDelete(id);
         setTimeout(() => {
             window.location.reload();
