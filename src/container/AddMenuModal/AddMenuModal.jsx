@@ -3,7 +3,8 @@ import { Button, Label, TextInput } from 'flowbite-react';
 import React from 'react';
 import { useState } from 'react';
 import  { VscChromeClose }  from 'react-icons/vsc';
-
+import { ToastContainer, toast, Zoom } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddMenu = ({ setOpenModal }) => {
   const [file, setFile] = useState();
@@ -50,6 +51,7 @@ const AddMenu = ({ setOpenModal }) => {
         .then(res => console.log(res))
         .catch(err => console.log(err));
       setOpenModal(false);
+      toast.success('Add Success');
       setTimeout(() => {
           window.location.reload();
         },1000);
@@ -60,6 +62,7 @@ const AddMenu = ({ setOpenModal }) => {
 
   return (
     <div>
+        <ToastContainer draggable={false} transition={Zoom} autoClose={1000} />
         <div className=" opacity-100 fixed inset-0 z-50   ">
             <div className="flex h-5/6 justify-center items-center ">
                 <div className="flex-col justify-center bg-white pt-9 pb-96 px-96 w-4/6  rounded-xl drop-shadow-2xl relative max-w-full max-h-0">
